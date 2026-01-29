@@ -142,7 +142,7 @@
         const hash = targetHref.substring(hashIndex);
         if (hash === '#' || hash === '#!') return;
 
-        const isCurrentPage = hashIndex === 0 || targetHref.substring(0, hashIndex).match(/^/?(?:index.html)?$/);
+        const isCurrentPage = hashIndex === 0 || targetHref.substring(0, hashIndex).match(/^\/?(?:index\.html)?$/);
 
         if (isCurrentPage) {
           e.preventDefault();
@@ -260,8 +260,8 @@
 
     const patterns = {
       name: /^[a-zA-ZÀ-ÿs-']{2,50}$/,
-      email: /^[^s@]+@[^s@]+.[^s@]+$/,
-      phone: /^[ds+-()]{7,20}$/,
+      email: /^[^s@]+@[^s@]+\.[^s@]+$/,
+      phone: /^[ds+\-()]{7,20}$/,
       message: /^.{10,1000}$/
     };
 
